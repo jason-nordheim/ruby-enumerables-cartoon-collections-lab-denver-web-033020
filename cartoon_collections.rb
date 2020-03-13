@@ -21,7 +21,9 @@ def find_the_cheese(ary_items)
   # default memo to false (not found)
   cheese = cheese_types.inject(nil) { | memo_a, obj_a |
     memo_a = ary_items.inject(nil) { | memo_b, obj_b |
-      memo_b = obj_b if obj_a == obj_b
+      if obj_a == obj_b
+        memo_b = obj_b
+      end
     }
   }
   return cheese
