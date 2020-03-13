@@ -21,9 +21,7 @@ def find_the_cheese(ary_items)
   # default memo to false (not found)
   cheese = cheese_types.find { | obj_a |
     memo_a = ary_items.find { |obj_b |
-      if obj_a == obj_b
-        memo_b = obj_b
-      end
+      obj_a == obj_b
     }
   }
   return cheese
