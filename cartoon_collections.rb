@@ -20,8 +20,8 @@ def find_the_cheese(ary_items)
   cheese_types = ["cheddar", "gouda", "camembert"]
   # default memo to false (not found)
   cheese = cheese_types.inject(nil) {| memo_a, obj_a |
-    memo_a = obja if ary_items.include(obj_a) else nil
+    memo_a = obj_a if ary_items.include(obj_a) else nil
   }
   end
-  return cheese 
+  return cheese
 end
